@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prédiction des Prix</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Formulaire de Prédiction</h1>
+    <form action="/predict" method="post">
+        <label>Quality1: <input type="text" name="Quality1" required></label><br>
+        <label>Quality2: <input type="text" name="Quality2" required></label><br>
+        <label>Quality3: <input type="text" name="Quality3" required></label><br>
+        <label>Small Bags: <input type="text" name="Small Bags" required></label><br>
+        <label>Large Bags: <input type="text" name="Large Bags" required></label><br>
+        <label>XLarge Bags: <input type="text" name="XLarge Bags" required></label><br>
+        <label>Year: <input type="text" name="year" required></label><br>
+        <label>Type: 
+            <select name="type">
+                <option value="organic">Organic</option>
+                <option value="conventional">Conventional</option>
+            </select>
+        </label><br>
+        <label>Region: <input type="text" name="region" required></label><br>
+        <label>AveragePrice: <input type="text" name="AveragePrice" required></label><br>
+        <button type="submit">Prédire</button>
+    </form>
+</body>
+</html>
